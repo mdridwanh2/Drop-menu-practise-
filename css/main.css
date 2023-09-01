@@ -1,0 +1,162 @@
+/* help css her ======================================================= */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: sans-serif;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+a{
+    text-transform: capitalize;
+}
+:root{
+    --nav-bg-color: #3d5163;
+    --nav-text-color: #f1f1f5;
+
+    --hver-bg-color: #043f5a;
+    --hver-text-color: #f5f5f8;
+
+}
+
+body{
+    min-height: 100vh;
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+   padding: 0 3%;
+}
+
+
+
+/* nav-bar here -=========================================== */
+header{
+    background-color: #3d5163;
+    position: relative;
+    z-index: 100;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.logo a{
+    display: inline-block;
+    color: var(--hver-text-color);
+    font-size: 35px;
+    font-weight: 600;
+}
+
+nav ul{
+    display: flex;
+}
+nav ul li{
+    position: relative;
+}
+
+nav ul li a{
+    display: block;
+    position: relative;
+    padding: 12px 20px;
+    color: var(--hver-text-color);
+    white-space: nowrap;
+    font-size: 17px;
+}
+nav ul li a:hover{
+    background-color: var(--hver-bg-color);
+    color: var(--hver-text-color);
+}
+
+
+/* bx-down-right ======================================================== */
+nav ul li:hover .bx-chevron-down{
+    transform: rotate(180deg);
+}
+.drop-menu li:hover .bx-chevron-right{
+    transform: rotate(180deg);
+}
+
+
+
+
+/* <!-- drop menu ========================================================--> */
+.drop-menu{
+    display: none;
+    background-color: var(--nav-bg-color);
+    position: absolute;
+    width: 140px;
+    left: 0;
+    top: 100%;
+}
+.drop-menu li{
+    width: 100%;
+    border-top: 1px dotted #fcfcfc;
+}
+nav ul li:hover .drop-menu{
+    display: block;
+}
+
+.drop-menu li:hover .drop-menu-1{
+    display: block;
+}
+
+
+
+
+
+/* drop-menu-1 ========================================================*/
+.drop-menu-1{
+    background-color: var(--nav-bg-color);
+    position: absolute;
+    display: none;
+    left: 100%;
+    top: 0;
+    width: 140px;
+    padding: 1px;
+}
+.drop-menu-1 li{
+    width: 100%;
+}
+
+
+
+
+
+/* down-right-icon ========================================================*/
+.down-right-icon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bx-chevron-down,
+.bx-chevron-right{
+    color: var(--hver-text-color);
+    font-size: 19px;
+}
+
+
+
+
+
+/* humbarger-icon ========================================================*/
+.humbarger-icon{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    cursor: pointer;
+}
+#humbarger-menu{
+    font-size: 42px;
+    color: var(--nav-text-color);
+}
